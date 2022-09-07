@@ -1,0 +1,14 @@
+module nand_tb(A, B, Y);
+reg A, b;
+wire Y;
+nand_new nandgate(.A(A), .B(B), .Y(Y));
+initial begin
+AB = 2'b00;
+#20 AB = 2'b01;
+#20 AB = 2'b10;
+#20 AB = 2'b11;
+#20 
+end
+always@(Y)
+$display("time = %0t \t INPUT VALUES: \t A = %b B = %b OUTPUT VALUE Y = %b", $time,A,B,Y);
+endmodule

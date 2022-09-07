@@ -7,7 +7,7 @@ AB = 2'b00;
 #20 AB = 2'b01;
 #20 AB = 2'b10;
 #20 AB = 2'b11;
-#20 
+#20 $finish;
 end
 always@(Y)
 $display("time = %0t \t INPUT VALUES: \t A = %b B = %b OUTPUT VALUE Y = %b", $time,A,B,Y);
